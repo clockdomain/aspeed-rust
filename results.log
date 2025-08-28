@@ -1,3 +1,12 @@
+
+commit 88f72048d2f5835a1b9eaba690c7861393aef283 (HEAD -> master, tag: v10.1.0-rc4, origin/master, origin/HEAD)
+Author: Stefan Hajnoczi <stefanha@redhat.com>
+Date:   Tue Aug 19 10:39:59 2025 -0400
+
+    Update version for the v10.1.0-rc4 release
+
+    Signed-off-by: Stefan Hajnoczi <stefanha@redhat.com>
+
 Hello, world!!
 
 
