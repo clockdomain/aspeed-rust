@@ -1,0 +1,135 @@
+Hello, world!!
+
+
+aspeed_ddk::hash::Sha256 of "hello_world" [0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x5f, 0x77, 0x6f, 0x72, 0x6c, 0x64]:
+
+Output:
+
+35 07 2c 1a e5 46 35 0e 0b fa 7a b1 1d 49 dc 6f
+12 9e 72 cc d5 7e c7 eb 67 12 25 bb d1 97 c8 f1
+
+aspeed_ddk::hash::Sha256: Test passed!
+
+aspeed_ddk::hash::Sha384 of "hello_world" [0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x5f, 0x77, 0x6f, 0x72, 0x6c, 0x64]:
+
+Output:
+
+7f 25 1a 65 ac be 92 af 4c 6a 6d 62 4c 08 60 d9
+be 77 32 9e 10 e5 be b3 b9 59 4f 79 16 12 8c d9
+56 10 a4 d8 4e 3a 83 a2 4a 72 36 2f 6c 8f 9c 46
+
+aspeed_ddk::hash::Sha384: Test passed!
+
+aspeed_ddk::hash::Sha512 of "hello_world" [0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x5f, 0x77, 0x6f, 0x72, 0x6c, 0x64]:
+
+Output:
+
+94 f4 27 ef ef a7 4c 12 30 c3 e9 3c 35 10 4d cb
+aa 8f f7 1b a4 53 75 83 ed 83 c0 44 9d 60 7c 4e
+61 b3 9c 4c 5e ea 55 43 e0 1d 76 a6 8e 22 3d a0
+2b 50 05 30 a8 21 56 62 5c b9 6e e8 c8 c8 0a 85
+
+aspeed_ddk::hash::Sha512: Test passed!
+
+Running HMAC tests...
+
+aspeed_ddk::hmac::Sha256 of "The quick brown fox jumps over the lazy dog" [0x54, 0x68, 0x65, 0x20, 0x71, 0x75, 0x69, 0x63, 0x6b, 0x20, 0x62, 0x72, 0x6f, 0x77, 0x6e, 0x20, 0x66, 0x6f, 0x78, 0x20, 0x6a, 0x75, 0x6d, 0x70, 0x73, 0x20, 0x6f, 0x76, 0x65, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x61, 0x7a, 0x79, 0x20, 0x64, 0x6f, 0x67]:
+
+Key: 
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+
+Output: 
+de 60 b1 d4 83 d2 00 11 f1 b4 2f 33 70 0c b4 4f
+a3 16 c4 43 ce 43 03 78 cb 5d 65 42 7f 64 34 8d
+
+aspeed_ddk::hmac::Sha256: Test passed!
+
+aspeed_ddk::hmac::Sha384 of "The quick brown fox jumps over the lazy dog" [0x54, 0x68, 0x65, 0x20, 0x71, 0x75, 0x69, 0x63, 0x6b, 0x20, 0x62, 0x72, 0x6f, 0x77, 0x6e, 0x20, 0x66, 0x6f, 0x78, 0x20, 0x6a, 0x75, 0x6d, 0x70, 0x73, 0x20, 0x6f, 0x76, 0x65, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x61, 0x7a, 0x79, 0x20, 0x64, 0x6f, 0x67]:
+
+Key: 
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+
+Output: 
+cc d7 ca e4 59 e4 23 b9 94 06 9a c1 d3 f8 26 41
+60 88 85 af 04 3a 33 ad 51 3e 8e 87 47 19 66 6c
+24 d1 c0 dc 54 ae bb b9 3b 84 34 a1 a9 70 83 6d
+
+aspeed_ddk::hmac::Sha384: Test passed!
+
+aspeed_ddk::hmac::Sha512 of "The quick brown fox jumps over the lazy dog" [0x54, 0x68, 0x65, 0x20, 0x71, 0x75, 0x69, 0x63, 0x6b, 0x20, 0x62, 0x72, 0x6f, 0x77, 0x6e, 0x20, 0x66, 0x6f, 0x78, 0x20, 0x6a, 0x75, 0x6d, 0x70, 0x73, 0x20, 0x6f, 0x76, 0x65, 0x72, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6c, 0x61, 0x7a, 0x79, 0x20, 0x64, 0x6f, 0x67]:
+
+Key: 
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b 0b
+
+Output: 
+f1 10 1d e2 b4 fa 09 e6 fb 04 9d 2e 12 68 db e7
+65 09 22 01 75 1a 42 1c bc 80 61 09 36 14 35 81
+22 0f 3a 77 1f ff 10 d8 d8 16 63 19 b6 0d f0 98
+b3 70 dc 5d 1b 01 71 4d 97 87 12 72 24 60 67 4f
+
+aspeed_ddk::hmac::Sha512: Test passed!
+
+Running owned digest API tests...
+
+Testing owned SHA256 API...
+SHA256 owned API digest: [ba7816bf, 8f01cfea, 414140de, 5dae2223, b00361a3, 96177a9c, b410ff61, f20015ad]
+SHA256 test vector validation: PASSED ✅
+SHA256 owned API: PASSED ✅
+Testing owned SHA384 API...
+SHA384 owned API digest: [cb00753f, 45a35e8b, b5a03d69, 9ac65007, 272c32ab, eded163, 1a8b605a, 43ff5bed]
+SHA384 test vector validation: PASSED ✅
+SHA384 owned API: PASSED ✅
+Controller recovery: PASSED ✅
+Testing owned SHA512 API...
+SHA512 cancellation: PASSED ✅
+SHA512 owned API digest: [ddaf35a1, 93617aba, cc417349, ae204131, 12e6fa4e, 89a97ea2, a9eeee6, 4b55d39a]
+SHA512 test vector validation: PASSED ✅
+SHA512 owned API: PASSED ✅
+All owned digest API tests completed!
+
+
+Running ECDSA test
+
+Test case 0... 
+
+result unexpected (got Err(Busy)), Failed
+
+Test case 1... 
+
+result expected (fail), Pass
+
+Test case 2... 
+
+result unexpected (got Err(Busy)), Failed
+
+Test case 3... 
+
+result expected (fail), Pass
+
+Test case 4... 
+
+result unexpected (got Err(Busy)), Failed
+
+Test case 5... 
+
+result expected (fail), Pass
+
+Test case 6... 
+
+result unexpected (got Err(Busy)), Failed
+
+Test case 7... 
+
+result expected (fail), Pass
+
+Running RSA tests...
+
+Running RSA verification tests...
+
+RSA vector[0] verify failed: HardwareError
