@@ -8,6 +8,7 @@ on:
       - main
     paths:
       - 'src/**'
+      - 'tests-hw/**'
       - 'Cargo.toml'
       - 'Cargo.lock'
 
@@ -34,25 +35,25 @@ jobs:
 
       - name: Build current branch
         run: |
-          cargo build --release --target thumbv7em-none-eabihf
+          cargo build -p aspeed-ddk-tests-hw --release --target thumbv7em-none-eabihf
 
       - name: Analyze current branch size
         run: |
           # Use cargo bloat directly since xtask bloat may not be available
-          cargo bloat --release --target thumbv7em-none-eabihf > target/pr-bloat-report.txt || echo "Bloat analysis failed"
-          
+          cargo bloat -p aspeed-ddk-tests-hw --release --target thumbv7em-none-eabihf > target/pr-bloat-report.txt || echo "Bloat analysis failed"
+
       - name: Checkout main branch
         run: |
           git checkout main
-          
-      - name: Build main branch  
+
+      - name: Build main branch
         run: |
-          cargo build --release --target thumbv7em-none-eabihf
-          
+          cargo build -p aspeed-ddk-tests-hw --release --target thumbv7em-none-eabihf
+
       - name: Analyze main branch size
         run: |
-          # Use cargo bloat directly since xtask bloat may not be available  
-          cargo bloat --release --target thumbv7em-none-eabihf > target/main-bloat-report.txt || echo "Bloat analysis failed"
+          # Use cargo bloat directly since xtask bloat may not be available
+          cargo bloat -p aspeed-ddk-tests-hw --release --target thumbv7em-none-eabihf > target/main-bloat-report.txt || echo "Bloat analysis failed"
 
       - name: Generate size comparison report
         id: size-comparison
@@ -62,9 +63,9 @@ jobs:
           echo "" >> size_report.md
           
           # Get binary sizes
-          PR_SIZE=$(stat -c%s target/thumbv7em-none-eabihf/release/aspeed-ddk 2>/dev/null || echo "0")
+          PR_SIZE=$(stat -c%s target/thumbv7em-none-eabihf/release/aspeed-ddk-tests-hw 2>/dev/null || echo "0")
           git checkout -
-          MAIN_SIZE=$(stat -c%s target/thumbv7em-none-eabihf/release/aspeed-ddk 2>/dev/null || echo "0")
+          MAIN_SIZE=$(stat -c%s target/thumbv7em-none-eabihf/release/aspeed-ddk-tests-hw 2>/dev/null || echo "0")
           
           # Calculate difference
           SIZE_DIFF=$((PR_SIZE - MAIN_SIZE))
